@@ -1,716 +1,367 @@
 
-<!DOCTYPE html
-    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0045)http://6.869.csail.mit.edu/fa19/schedule.html -->
-<html xmlns="http://www.w3.org/1999/xhtml">
-<link href="https://fonts.cdnfonts.com/css/caveat" rel="stylesheet">
-<style>
-    @import url('https://fonts.cdnfonts.com/css/caveat');
-</style>
-<!-- <script src="./assets/teaser-data.js"></script> -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<!--	<script async src="https://www.googletagmanager.com/gtag/js?id=G-WLX2Z5QLG8"></script>-->
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-WLX2Z5QLG8');
+	</script>
 
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Make-A-Protagonist</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <meta name="description"
-        content="Project page for &#39;Make-A-Protagonist: Generic Video Editing with An Ensemble of Experts.&#39;">
-    <!-- <link rel="icon" href="./assets/showlab.ico"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <style>
 
-    </style>
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function () {
+
+    if (localStorage.getItem("my_app_name_here-quote-scroll") != null) {
+        $(window).scrollTop(localStorage.getItem("my_app_name_here-quote-scroll"));
+    }
+
+    $(window).on("scroll", function() {
+        localStorage.setItem("my_app_name_here-quote-scroll", $(window).scrollTop());
+    });
+
+  });
+</script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>T2I-CompBench: A Comprehensive Benchmark for Open-world Compositional Text-to-image Generation</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+
+
+  <meta name="description" content="Project page for &#39;MultiDiffusion: Fusing Diffusion Paths for Controlled Image Generation.&#39;">
+  <link rel="icon" href="./pics/wis_logo.jpg">
 </head>
 
 <body>
-    <p class="title">Make-A-Protagonist: <br> Generic Video Editing with An Ensemble of Experts</p>
-    <p class="author">
-        <span class="author">
-            <a href="https://yuyangzhao.com">Yuyang Zhao</a><sup>1</sup>
-        </span>
-        <span class="author">
-            <a href="https://xieenze.github.io/">Enze Xie</a><sup>2</sup>
-        </span>
-        <span class="author">
-            <a href="https://scholar.google.com.sg/citations?user=2p7x6OUAAAAJ&hl=en">Lanqing Hong</a><sup>2</sup>
-        </span>
-        <span class="author">
-            <a href="https://scholar.google.com.sg/citations?user=XboZC1AAAAAJ&hl=en">Zhenguo Li</a><sup>2</sup>
-        </span>
-        <span class="author">
-            <a href="https://www.comp.nus.edu.sg/~leegh/">Gim Hee Lee</a><sup>1</sup>
-        </span>
-    </p>
+<!--   <p class="title">MultiDiffusion: Fusing Diffusion Paths for Controlled Image Generation</p>
+  <table width="999" border="0" align="center" class="menu" style="margin-bottom: 8px;">
+    <tbody>
+      <tr>
+        <td style="font-size: 17pt;" align="center"></td>
+      </tr>
+    </tbody>
+  </table> -->
+	  <table width="999" border="0" align="center" class="menu" style="margin-bottom: 8px;">
+    <tbody>
+      <tr>  <p class="title">MultiDiffusion: Fusing Diffusion Paths for Controlled Image Generation</p>
+        <td style="font-size: 17pt;" align="center"></td>
+      </tr>
+          <tr>
+        <td style="font-size: 17pt;" align="center">ICML 2023</td>
+      </tr>
+    </tbody>
+  </table>
+<p class="author">
+    <span class="author"><a target="_blank" href="https://omerbt.github.io">Omer Bar-Tal</a>&nbsp;<sup>*1</sup></span>
+    <span class="author"><a target="_blank" href="https://lioryariv.github.io/">Lior Yariv&nbsp;</a><sup>*1</sup></span>
+	<span class="author"><a target="_blank" href="https://www.wisdom.weizmann.ac.il/~ylipman/">Yaron Lipman</a>&nbsp;<sup>1,2</sup></span>
+    <span class="author"><a target="_blank" href="https://www.weizmann.ac.il/math/dekel/">Tali Dekel</a>&nbsp;<sup>1&nbsp;</sup></span>
+<!--  	<span class="author"><a target="_blank" href="https://omerbt.github.io">Omer Bar-Tal</a>&nbsp;<sup>*</sup></span>
+	<span class="author"><a target="_blank" href="https://lioryariv.github.io/">Lior Yariv&nbsp;</a><sup>*</sup></span>
+	<span class="author"><a target="_blank" href="https://www.wisdom.weizmann.ac.il/~ylipman/">Yaron Lipman</a>&nbsp;</span> -->
+<!--     <span class="author"><a target="_blank" href="https://www.weizmann.ac.il/math/dekel/">Tali Dekel</a></span> -->
+  </p>
+  <table border="0" align="center" class="affiliations" width="1200px">
+      <tbody align="center">
+    <tr>
+        <td></td>
+<!--        <td style="text-align: right; width: 17%"><img src="./pics/wis_logo.jpg" height="48" alt=""></td>-->
+        <td style="text-align: center; ">&nbsp;<sup>&nbsp;</sup>&nbsp;<sup>1&nbsp;&nbsp;</sup>Weizmann Institute of Science &nbsp;<sup>2&nbsp;</sup>Meta AI &nbsp;*equal contribution</td>
+<!--         <td style="text-align: center; ">&nbsp;<sup>&nbsp;</sup>&nbspWeizmann Institute of Science &nbsp;&nbsp;*equal contribution</td> -->
+        <!--    </tr>-->
+<!--    <tr>-->
+<!--        <td style="text-align: right; width: 17%"></td>-->
+<!--        <td style="text-align: left; width:20%; ">&nbsp;<sup>&nbsp;</sup>&nbsp;<sup>2&nbsp;&nbsp;</sup>Meta AI</td>-->
+    </tr>
+    </tbody></table>
 
-    <p class="affiliations">
-        <span class="author"><sup>1 </sup>National University of Singapore</span>
-        <span class="author"><sup>2 </sup>Huawei Noah's Ark Lab</span>
-    </p>
+    <table width="999" border="0" align="center" class="menu" style="margin-bottom: 8px;">
+      <tbody>
+        <tr>
+<!--          <td align="center">| <a href="paper_compressed.pdf">Paper</a> | <a href="sm/index.html">Supplementary Material</a> | <a href="https://github.com/omerbt/MultiDiffusion" target="_blank">Code</a> |</td>-->
+          <td align="center">| <a href="https://arxiv.org/abs/2302.08113">Paper</a> | <a href="sm/index.html">Supplementary Material</a> | <a href="https://github.com/omerbt/MultiDiffusion" target="_blank">Code</a> | <a href="https://huggingface.co/spaces/weizmannscience/MultiDiffusion" target="_blank">Demo</a> |</td>
+        </tr>
+      </tbody>
+    </table>
+<div class="container">
+      <table width="1000" border="0" align="center">
+        <tbody>
+			<tr>
+                <hr>
+<!--                <img src="pics/teaser.jpg" alt="" width="1000" />-->
+                <video width="100%" playsinline="" autoplay="" loop="" preload="" muted=""> <source src="pics/demo_nowatermark.mp4" type="video/mp4"> </video>
+<hr>
+            </tr>
+			<tr>
+<!--				<td style="text-align: left; width: 13%"><i>*Equal contribution.</i></td>-->
+		  </tr>
+		  <tr align="center"></tr>
+        </tbody></table>
+<!--	    &nbsp;-->
 
-    <p class="menu">
-        <a style="color: steelblue" href="https://arxiv.org/abs/2305.08850">[Paper]</a> 
-        <a style="color: steelblue" href="https://github.com/HeliosZhao/Make-A-Protagonist" >[Code]</a>
-        <a style="color: steelblue" href="https://huggingface.co/spaces/Make-A-Protagonist/Make-A-Protagonist-inference">[Demo]</a>
-    </p>
+  <p><span class="section"><b>Abstract</b></span> </p>
+          <p>
+              Recent advances in text-to-image generation with diffusion models present transformative capabilities in image quality. However, user controllability of the generated image, and fast adaptation to new tasks still remains an open challenge, currently mostly addressed by costly and long re-training and fine-tuning or ad-hoc adaptations to specific image generation tasks. In this work, we present MultiDiffusion, a unified framework that enables versatile and controllable image generation, using a pre-trained text-to-image diffusion model, without any further training or finetuning. At the center of our approach is a new generation process, based on an optimization task that binds together multiple diffusion generation processes with a shared set of parameters or constraints. We show that MultiDiffusion can be readily applied to generate high quality and diverse images that adhere to user-provided controls, such as desired aspect ratio (e.g., panorama), and spatial guiding signals, ranging from tight segmentation masks to bounding boxes.
+          </p>
 
-    <div class="container">
-        <table width="1080px" border="0" align="center">
+<hr>
+<!--  <p class="section">&nbsp;</p>-->
+    <p class="section"><b>Method</b></p>
+      <div class="container">
+<table align="center" width="940" border="0">
+  <tbody>
+    <tr>
+      <td><p style="margin-top: -12px;">
+          Our key idea is to define a new generation process over a pre-trained reference diffusion model.
+          Starting from a noise image, at each generation step, we solve an optimization task whose objective is that each crop
+          will follow as closely as possible its denoised version.
+      </p></td>
+    </tr>
+    <tr>
+      <td><img src="pics/pipeline.jpg" alt="" width="1000" /></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+          <table align="" width="940" border="0">
+  <tbody>
+    <tr>
+      <td><p>
+          Note that while each denoising step may pull to a different direction,
+          our process fuses these inconsistent directions into a global denoising step, resulting in a high-quality seamless image.
+      </p></td>
+    </tr>
+    <tr>
+      <td style="padding-left: 75px">
+        <video height="250" playsinline="" autoplay="" loop="" preload="" muted=""> <source src="pics/fusing.mp4" type="video/mp4"> </video>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<hr>
+<p class="section"><b>Applications</b></p>
+		  
+<p class="section" style="font-size: 120%"><b>Text-to-Panorama generation</b></p>
+
+    <p style="margin-top: -10px;">
+        We demonstrate text-to-panorama results using MultiDiffusion, in resolution 512x4608.
+      </p>
+
+    <div class="slideshow-container">
+
+<div class="mySlides fade">
+<!--  <div class="numbertext">1 / 3</div>-->
+  <a href="pics/panorama/1.png"> <img src="pics/panorama/1.png" style="width:100%"></a>
+<!--  <div class="text">Caption Text</div>-->
+</div>
+
+<div class="mySlides fade">
+<!--  <div class="numbertext">2 / 3</div>-->
+  <a href="pics/panorama/2.png"> <img src="pics/panorama/2.png" style="width:100%"></a>
+<!--  <div class="text">Caption Two</div>-->
+</div>
+
+<div class="mySlides fade">
+<!--  <div class="numbertext">3 / 3</div>-->
+  <a href="pics/panorama/3.png"> <img src="pics/panorama/3.png" style="width:100%"></a>
+<!--  <div class="text">Caption Three</div>-->
+</div>
+        <div class="mySlides fade">
+<!--  <div class="numbertext">3 / 3</div>-->
+  <a href="pics/panorama/4.png"> <img src="pics/panorama/4.png" style="width:100%"></a>
+<!--  <div class="text">Caption Three</div>-->
+</div>
+        <div class="mySlides fade">
+<!--  <div class="numbertext">3 / 3</div>-->
+  <a href="pics/panorama/5.png"> <img src="pics/panorama/5.png" style="width:100%"></a>
+<!--  <div class="text">Caption Three</div>-->
+</div>
+        <div class="mySlides fade">
+<!--  <div class="numbertext">3 / 3</div>-->
+  <a href="pics/panorama/6.png"> <img src="pics/panorama/6.png" style="width:100%"></a>
+<!--  <div class="text">Caption Three</div>-->
+</div>
+        <div class="mySlides fade">
+<!--  <div class="numbertext">3 / 3</div>-->
+  <a href="pics/panorama/7.png"> <img src="pics/panorama/7.png" style="width:100%"></a>
+<!--  <div class="text">Caption Three</div>-->
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+</div>
+<!--<hr>-->
+<br>
+		  
+		  
+		  
+<p class="section" style="font-size: 120%"><b>Tight region-based generation</b></p>
+<!--      <div class="container">-->
+	<table align="center" width="940" border="0">
+  	<tbody>
+	  
+	      <tr>
+      <td><p style="margin-top: -15px;">
+          Our method can work with tight, accurate segmentation masks, if provided by the user.
+      </p></td>
+    </tr>
+    <tr>
+      <td><img src="pics/tight.jpg" alt="" width="1000" /></td>
+    </tr>
+		  </tbody>
+	</table><br>
+<!--	</div>-->
+	
+	<p class="section" style="font-size: 120%"><b>Rough region-based generation</b></p>
+<!--      <div class="container">-->
+	<table align="center" width="940" border="0">
+  	<tbody>
+	      <tr>
+      <td><p style="margin-top: -35px;">
+          Additionally, our method can work with rough masks that can intuitively be obtained by novice users.
+          Note that we can also work at arbitrary aspect ratios, similarly to the panoramas.
+      </p></td>
+    </tr>
+    <tr>
+      <td><img src="pics/rough-01.jpg" alt="" width="1000" /></td>
+    </tr>
+ <br>
+	  
+	  
+	 
+    <tr>
+      <td><p style="margin-top: 0px;"><br>
+          We further show diverse samples generated by our framework, given rough scene layout guidance. All images depict sensible composition, scene effects and relative size of objects.
+      </p></td>
+    </tr>
+    <tr>
+      <td><img src="pics/var_1.jpg" alt="" width="1000" /></td>
+    </tr>
+    <tr></tr>
+		  
+	</tbody>
+	</table>
+<!--	</div>-->
+
+<hr>
+
+<div>
+<!--<p class="section">&nbsp;</p>-->
+
+<p class="section">&nbsp;</p>
+<p class="section" id="paper"><b>Paper</b></p>
+          <table width="940" border="0">
             <tbody>
-                <tr>
-                    <div id="imageCarousel" class="carousel slide teaser-carousel" data-ride="carousel" data-interval="5000">
-                        <div class="carousel-inner">
-                            <!-- Basketball -->
-                            <div class="carousel-item active">
-                                <div>
-                                    <img class="teaser-img" src="./assets/data/ikun.gif" />
-                                    <span style="font-size: 150%;">+</span>
-                                    <img id="ikun-ref" class="teaser-img" src="./assets/reference/ikun/zhongli.jpg" />
-                                    <span style="font-size: 150%;">→</span>
-                                    <img id="ikun-result" class="teaser-img" src="./assets/results/ikun/ikun-beach.gif" />
-                                </div>
-                                <br />
-                                <div>
-                                    
-                                    <div class="caption" id="ikun-beach">
-                                        "A <span style="color: darkred">man</span> playing basketball <span style="color: steelblue">on the beach, anime style</span>"
-                                    </div>
-                                    
-                                </div>
-                            </div>
-
-                            <div class="carousel-item">
-                                <div>
-                                    <img class="teaser-img" src="./assets/data/huaqiang.gif" />
-                                    <span style="font-size: 150%;">+</span>
-                                    <img id="huaqiang-ref" class="teaser-img" src="./assets/reference/huaqiang/musk.jpg" />
-                                    <span style="font-size: 150%;">→</span>
-                                    <img id="huaqiang-result" class="teaser-img" src="./assets/results/huaqiang/huaqiang-musk.gif" />
-                                </div>
-                                <br />
-                                <div>
-                                    
-                                    <div class="caption" id="huaqiang-musk">
-                                        "<span style="color: darkred">Elon Musk</span> walking down the street"
-                                    </div>
-                                    
-                                </div>
-                            </div>
-
-
-                            <div class="carousel-item">
-                                <div>
-                                    <img class="teaser-img" src="./assets/data/yanzi.gif" />
-                                    <span style="font-size: 150%;">+</span>
-                                    <img id="yanzi-ref" class="teaser-img" src="./assets/reference/yanzi/panda.jpeg" />
-                                    <span style="font-size: 150%;">→</span>
-                                    <img id="yanzi-result" class="teaser-img" src="./assets/results/yanzi/panda.gif" />
-                                </div>
-                                <br />
-                                <div>
-                                    
-                                    <div class="caption" id="yanzi-panda">
-                                        "A <span style="color: darkred">panda</span> walking down <span style="color: steelblue">the snowy street</span>"
-                                    </div>
-                                    
-                                </div>
-                            </div>
-
-                            <div class="carousel-item">
-                                <div>
-                                    <img class="teaser-img" src="./assets/data/man-dance.gif" />
-                                    <span style="font-size: 150%;">+</span>
-                                    <img id="huaqiang-ref" class="teaser-img" src="./assets/reference/man-dance/peng.png" />
-                                    <span style="font-size: 150%;">→</span>
-                                    <img id="huaqiang-result" class="teaser-img" src="./assets/results/man-dance/man-dance-peng.gif" />
-                                </div>
-                                <br />
-                                <div>
-                                    
-                                    <div class="caption" id="man-dance-peng">
-                                        "A <span style="color: darkred">man</span>  <span style="color: steelblue">in dark blue suit with white shirt</span> dancing <span style="color: steelblue">on the beach</span>"
-                                    </div>
-                                    
-                                </div>
-                            </div>
-
-                            <div class="carousel-item">
-                                <div>
-                                    <img class="teaser-img" src="./assets/data/girl-dance.gif" />
-                                    <span style="font-size: 150%;">+</span>
-                                    <img id="huaqiang-ref" class="teaser-img" src="./assets/reference/girl-dance/beel.jpeg" />
-                                    <span style="font-size: 150%;">→</span>
-                                    <img id="huaqiang-result" class="teaser-img" src="./assets/results/girl-dance/girl-dance-beel.gif" />
-                                </div>
-                                <br />
-                                <div>
-                                    
-                                    <div class="caption" id="girl-dance-beel">
-                                        "A <span style="color: darkred">girl</span> dancing <span style="color: steelblue">on the beach, anime style</span>"
-                                    </div>
-                                    
-                                </div>
-                            </div>
-
-                            <div class="carousel-item">
-                                <div>
-                                    <img class="teaser-img" src="./assets/data/car-turn.gif" />
-                                    <span style="font-size: 150%;">+</span>
-                                    <img id="drift-ref" class="teaser-img" src="./assets/reference/car-turn/0000.jpg" />
-                                    <span style="font-size: 150%;">→</span>
-                                    <img id="drift-result" class="teaser-img" src="./assets/results/car-turn/sj-rain.gif" />
-                                </div>
-                                <br />
-                                <div>
-                                    
-                                    <div class="caption" id="drift-night">
-                                        "A <span style="color: darkred">Suzuki Jimny</span> driving down a mountain road <span style="color: steelblue">in the rain</span>"
-                                    </div>
-                                    
-                                </div>
-                            </div>
-
-                        </div>
-                        <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
-                            <div class="slider-navigation-previous">
-                                <svg viewBox="0 0 50 80" xml:space="preserve">
-                                    <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
-                                        stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 ">
-                                    </polyline>
-                                </svg>
-                            </div>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
-                            <div class="slider-navigation-next">
-                                <svg viewBox="0 0 50 80" xml:space="preserve">
-                                    <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
-                                        stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 ">
-                                    </polyline>
-                                </svg>
-                            </div>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                </tr>
-                <tr> <br /> </tr>
-                <tr align="center"></tr>
+              <tr>
+                <td height="100"><a href="https://arxiv.org/abs/2302.08113" target="_blank" rel="noopener noreferrer"><img src="./pics/paper_cover.jpg" alt="" width="140" height="167"></a></td>
+                <td width="750"><p><b>MultiDiffusion: Fusing Diffusion Paths for Controlled Image Generation
+                </b><br>
+                  Omer Bar-Tal <sup>*</sup>, Lior Yariv <sup>*</sup>, Yaron Lipman, Tali Dekel.<br />
+                  (* indicates equal contribution)                  <br>
+                  <em>ICML 2023</em><br><br>
+                   [<a href="https://arxiv.org/abs/2302.08113" target="_blank" rel="noopener noreferrer">paper</a>]</p>
+                </td>
+              </tr>
             </tbody>
-        </table>
-        &nbsp;
-        <p class="section">&nbsp;</p>
-
-        <p style="text-align: center;"><span class="section"><b>Abstract</b></span></p>
-        <p style="text-align: justify; display: flex; justify-content: center; max-width: 800px; margin:auto"> 
-            The text-driven image and video diffusion models have achieved unprecedented success in generating realistic and diverse content. Recently, the editing and variation of existing images and videos in diffusion-based generative models have garnered significant attention. However, previous works are limited to editing content with text or providing coarse personalization using a single visual clue, rendering them unsuitable for indescribable content that requires fine-grained and detailed control. In this regard, we propose a generic video editing framework called Make-A-Protagonist, which utilizes textual and visual clues to edit videos with the goal of empowering individuals to become the protagonists. Specifically, we leverage multiple experts to parse source video, target visual and textual clues, and propose a visual-textual-based video generation model that employs mask-guided denoising sampling to generate the desired output. Extensive results demonstrate the versatile and remarkable editing capabilities of Make-A-Protagonist.
-        <p class="section">&nbsp;</p>
-
-        <p class="section"><b>Introduction</b></p>
-        <div style="text-align: center">
-            <img src="./assets/teaser-video.gif" alt="" width="1080px" style="max-width: 100%; height: auto;" />
-        </div>
-
-        <p class="section"><b>Method</b></p>
-        <div style="text-align: center">
-            <img src="./assets/framework.png" alt="" width="800px" style="max-width: 100%; height: auto;" />
-        </div>
-        </br>
-        <p style="text-align: center">
-            <em>The first framework for generic video editing with both visual and textual clues.</em>
-        </p>
-        
-        <p class="section">&nbsp;</p>
-
-        <p class="section"><b>Results</b></p>
-        <!-- <div style="text-align: center">
-            <img src="./sm/assets/results.jpg" alt="" width="850" style="margin: auto" />
-        </div> -->
-
-        </br>
-        <div class="container" style="min-height: 224px">
-            <p style="text-align: center; font-size: 150%">Text-to-Video Editing with Protagonist</p>
-            <div id="resultCarousel1" class="carousel slide" data-ride="carousel" data-interval="5000">
-                <div class="carousel-inner">
-
-                    <div class="carousel-item active">
-                        <table width="800px" align="center">
-                            <tbody>
-                                <tr>
-                                    <th><img width="224" src="./assets/data/ikun.gif" /></th>
-                                    <th><img width="224" src="./assets/reference/ikun/zhongli.jpg" /></th>
-                                    <th><img width="224" src="./assets/results/ikun/ikun-beach.gif" /></th>
-                                </tr>
-                                <tr>
-                                    <th><div class="caption" style="width: 300px;">"A man playing basketball"</div></th>
-                                    <th><div class="caption"></div></th>
-                                    <th><div class="caption">"A <span style="color: darkred">man</span> playing basketball <span style="color: steelblue">on the beach, anime style</span>"</span></div></th>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="carousel-item">
-                        <table width="800px" align="center">
-                            <tbody>
-                                <tr>
-                                    <th><img width="224" src="./assets/data/girl-dance.gif" /></th>
-                                    <th><img width="224" src="./assets/reference/girl-dance/beel.jpeg" /></th>
-                                    <th><img width="224" src="./assets/results/girl-dance/girl-dance-beel.gif" /></th>
-                                </tr>
-                                <tr>
-                                    <th><div class="caption" style="width: 300px;">"A girl in white dress dancing on a bridge"</div></th>
-                                    <th><div class="caption"></div></th>
-                                    <th><div class="caption">"A <span style="color: darkred">girl</span> dancing <span style="color: steelblue">on the beach, anime style</span>"</span></div></th>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="carousel-item">
-                        <table width="800px" align="center">
-                            <tbody>
-                                <tr>
-                                    <th><img width="224" src="./assets/data/man-dance.gif" /></th>
-                                    <th><img width="224" src="./assets/reference/man-dance/peng.png" /></th>
-                                    <th><img width="224" src="./assets/results/man-dance/man-dance-peng.gif" /></th>
-                                </tr>
-                                <tr>
-                                    <th><div class="caption" style="width: 300px;">"A man dancing in a room"</div></th>
-                                    <th><div class="caption"></div></th>
-                                    <th><div class="caption">"A <span style="color: darkred">man</span>  <span style="color: steelblue">in dark blue suit with white shirt</span> dancing <span style="color: steelblue">on the beach</span>"</span></div></th>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="carousel-item">
-                        <table width="800px" align="center">
-                            <tbody>
-                                <tr>
-                                    <th><img width="224" src="./assets/data/bird.gif" /></th>
-                                    <th><img width="224" src="./assets/reference/bird-forest/eagle.jpeg" /></th>
-                                    <th><img width="224" src="./assets/results/bird/eagle-city.gif" /></th>
-                                </tr>
-                                <tr>
-                                    <th><div class="caption" style="width: 300px;">"A red macaw flying over a river"</div></th>
-                                    <th><div class="caption"></div></th>
-                                    <th><div class="caption">"An <span style="color: darkred">eagle</span> flying <span style="color: steelblue">in the city</span>"</span></div></th>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-
-                    <div class="carousel-item">
-                        <table width="800px" align="center">
-                            <tbody>
-                                <tr>
-                                    <th><img width="224" src="./assets/data/yanzi.gif" /></th>
-                                    <th><img width="224" src="./assets/reference/yanzi/panda.jpeg" /></th>
-                                    <th><img width="224" src="./assets/results/yanzi/panda.gif" /></th>
-                                </tr>
-                                <tr>
-                                    <th><div class="caption" style="width: 300px;">"A man walking down the street"</div></th>
-                                    <th><div class="caption"></div></th>
-                                    <th><div class="caption">"A <span style="color: darkred">panda</span> walking down <span style="color: steelblue">the snowy street</span>"</span></div></th>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-
-                    <div class="carousel-item">
-                        <table width="800px" align="center">
-                            <tbody>
-                                <tr>
-                                    <th><img width="224" src="./assets/data/car-turn.gif" /></th>
-                                    <th><img width="224" src="./assets/reference/car-turn/audi.jpeg" /></th>
-                                    <th><img width="224" src="./assets/results/car-turn/car-desert.gif" /></th>
-                                </tr>
-                                <tr>
-                                    <th><div class="caption" style="width: 300px;">"A Suzuki Jimny driving down a mountain road"</div></th>
-                                    <th><div class="caption"></div></th>
-                                    <th><div class="caption">"A <span style="color: darkred">car</span> moving <span style="color: steelblue">in the desert</span>"</span></div></th>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-
-                    <div class="carousel-item">
-                        <table width="800px" align="center">
-                            <tbody>
-                                <tr>
-                                    <th><img width="224" src="./assets/data/drift-car.gif" /></th>
-                                    <th><img width="224" src="./assets/reference/drift-car/aston.jpeg" /></th>
-                                    <th><img width="224" src="./assets/results/drift-car/aston.gif" /></th>
-                                </tr>
-                                <tr>
-                                    <th><div class="caption" style="width: 300px;">"A drift car driving down a track"</div></th>
-                                    <th><div class="caption"></div></th>
-                                    <th><div class="caption">"A <span style="color: darkred">car</span> driving down a track <span style="color: steelblue">in the snow</span>"</span></div></th>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <!-- <div class="carousel-item">
-                        <table width="800px" align="center">
-                            <tbody>
-                                <tr>
-                                    <th><img width="224" src="./assets/data/motorbike.gif" /></th>
-                                    <th><img width="224" src="./assets/reference/motorbike/pink-motor.png" /></th>
-                                    <th><img width="224" src="./assets/results/motorbike/motor-beach.gif" /></th>
-                                </tr>
-                                <tr>
-                                    <th><div class="caption" style="width: 300px;">"A man riding a dirt bike through a river"</div></th>
-                                    <th><div class="caption"></div></th>
-                                    <th><div class="caption">"A man riding a <span style="color: darkred">motorbike</span> <span style="color: steelblue">on the beach</span>"</span></div></th>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div> -->
-
-                    <div class="carousel-item">
-                        <table width="1080px" align="center">
-                            <tbody>
-                                <tr>
-                                    <th><img width="224" src="./assets/data/motorbike.gif" /></th>
-                                    <th><img width="224" src="./assets/reference/motorbike/pink-motor.png" /></th>
-                                    <th><img width="224" src="./assets/reference/motorbike/wanye.jpeg" /></th>
-                                    <th><img width="224" src="./assets/results/motorbike/motor-man-snow.gif" /></th>
-                                </tr>
-                                <tr>
-                                    <th><div class="caption" style="width: 300px;">"A man riding a dirt bike through a river"</div></th>
-                                    <th><div class="caption"></div></th>
-                                    <th><div class="caption"></div></th>
-                                    <th><div class="caption">"A <span style="color: darkred">man</span> riding a <span style="color: darkred">motorbike</span> <span style="color: steelblue">in the snow, anime style</span>"</span></div></th>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                </div>
-                    
-
-                <a class="carousel-control-prev" href="#resultCarousel1" role="button" data-slide="prev">
-                    <div class="slider-navigation-previous" style="top: 40%">
-                        <svg viewBox="0 0 50 80" xml:space="preserve">
-                            <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
-                                stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 ">
-                            </polyline>
-                        </svg>
-                    </div>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#resultCarousel1" role="button" data-slide="next">
-                    <div class="slider-navigation-next" style="top: 40%">
-                        <svg viewBox="0 0 50 80" xml:space="preserve">
-                            <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
-                                stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 ">
-                            </polyline>
-                        </svg>
-                    </div>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-
-        </br>
-
-        <div class="container" style="min-height: 224px">
-            <p style="text-align: center; font-size: 150%">Protagonist Editing</p>
-            <div id="resultCarousel2" class="carousel slide" data-ride="carousel" data-interval="5000">
-                <div class="carousel-inner">
-
-                    <div class="carousel-item active">
-                        <table width="800px" align="center">
-                            <tbody>
-                                <tr>
-                                    <th><img width="224" src="./assets/data/ikun.gif" /></th>
-                                    <th><img width="224" src="./assets/reference/ikun/wt.jpg" /></th>
-                                    <th><img width="224" src="./assets/results/ikun/ikun-wt.gif" /></th>
-                                </tr>
-                                <tr>
-                                    <th><div class="caption" style="width: 300px;">"A man playing basketball"</div></th>
-                                    <th><div class="caption"></div></th>
-                                    <th><div class="caption">"A <span style="color: darkred">man</span> playing basketball"</span></div></th>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="carousel-item">
-                        <table width="800px" align="center">
-                            <tbody>
-                                <tr>
-                                    <th><img width="224" src="./assets/data/huaqiang.gif" /></th>
-                                    <th><img width="224" src="./assets/reference/huaqiang/musk.jpg" /></th>
-                                    <th><img width="224" src="./assets/results/huaqiang/huaqiang-musk.gif" /></th>
-                                </tr>
-                                <tr>
-                                    <th><div class="caption" style="width: 300px;">"A man walking down the street"</div></th>
-                                    <th><div class="caption"></div></th>
-                                    <th><div class="caption">"<span style="color: darkred">Elon Musk</span> walking down the street"</span></div></th>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="carousel-item">
-                        <table width="800px" align="center">
-                            <tbody>
-                                <tr>
-                                    <th><img width="224" src="./assets/data/car-turn.gif" /></th>
-                                    <th><img width="224" src="./assets/reference/car-turn/audi.jpeg" /></th>
-                                    <th><img width="224" src="./assets/results/car-turn/car-mountain.gif" /></th>
-                                </tr>
-                                <tr>
-                                    <th><div class="caption" style="width: 300px;">"A Suzuki Jimny driving down a mountain road"</div></th>
-                                    <th><div class="caption"></div></th>
-                                    <th><div class="caption">"A <span style="color: darkred">car</span> driving down a mountain road"</span></div></th>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="carousel-item">
-                        <table width="800px" align="center">
-                            <tbody>
-                                <tr>
-                                    <th><img width="224" src="./assets/data/bird.gif" /></th>
-                                    <th><img width="224" src="./assets/reference/bird-forest/eagle.jpeg" /></th>
-                                    <th><img width="224" src="./assets/results/bird/eagle-river.gif" /></th>
-                                </tr>
-                                <tr>
-                                    <th><div class="caption" style="width: 300px;">"A red macaw flying over a river"</div></th>
-                                    <th><div class="caption"></div></th>
-                                    <th><div class="caption">"An <span style="color: darkred">eagle</span> flying over a river"</span></div></th>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                </div>
-
-                <a class="carousel-control-prev" href="#resultCarousel2" role="button" data-slide="prev">
-                    <div class="slider-navigation-previous" style="top: 40%">
-                        <svg viewBox="0 0 50 80" xml:space="preserve">
-                            <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
-                                stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 ">
-                            </polyline>
-                        </svg>
-                    </div>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#resultCarousel2" role="button" data-slide="next">
-                    <div class="slider-navigation-next" style="top: 40%">
-                        <svg viewBox="0 0 50 80" xml:space="preserve">
-                            <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
-                                stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 ">
-                            </polyline>
-                        </svg>
-                    </div>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-
-        </br>
-
-        <div class="container" style="min-height: 224px">
-            <p style="text-align: center; font-size: 150%">Background Editing</p>
-            <div id="resultCarousel3" class="carousel slide" data-ride="carousel" data-interval="5000">
-                <div class="carousel-inner">
-
-
-                    <div class="carousel-item active">
-                        <table width="800px" align="center">
-                            <tbody>
-                                <tr>
-                                    <th><img width="224" src="./assets/data/ikun.gif" /></th>
-                                    <th><img width="224" src="./assets/reference/ikun/kun.jpg" /></th>
-                                    <th><img width="224" src="./assets/results/ikun/ikun-forest.gif" /></th>
-                                </tr>
-                                <tr>
-                                    <th><div class="caption" style="width: 300px;">"A man playing basketball"</div></th>
-                                    <th><div class="caption"></div></th>
-                                    <th><div class="caption">"A <span style="color: darkred">man</span> playing basketball <span style="color: steelblue">in the forest</span>"</span></div></th>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="carousel-item">
-                        <table width="800px" align="center">
-                            <tbody>
-                                <tr>
-                                    <th><img width="224" src="./assets/data/drift-car.gif" /></th>
-                                    <th><img width="224" src="./assets/reference/drift-car/drift.jpg" /></th>
-                                    <th><img width="224" src="./assets/results/drift-car/night.gif" /></th>
-                                </tr>
-                                <tr>
-                                    <th><div class="caption" style="width: 300px;">"A drift car driving down a track"</div></th>
-                                    <th><div class="caption"></div></th>
-                                    <th><div class="caption">"A <span style="color: darkred">drift car</span> driving down a track <span style="color: steelblue">at night</span>"</span></div></th>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="carousel-item">
-                        <table width="800px" align="center">
-                            <tbody>
-                                <tr>
-                                    <th><img width="224" src="./assets/data/car-turn.gif" /></th>
-                                    <th><img width="224" src="./assets/reference/car-turn/0000.jpg" /></th>
-                                    <th><img width="224" src="./assets/results/car-turn/sj-rain.gif" /></th>
-                                </tr>
-                                <tr>
-                                    <th><div class="caption" style="width: 300px;">"A Suzuki Jimny driving down a mountain road"</div></th>
-                                    <th><div class="caption"></div></th>
-                                    <th><div class="caption">"A <span style="color: darkred">Suzuki Jimny</span> driving down a mountain road <span style="color: steelblue">in the rain</span>"</span></div></th>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="carousel-item">
-                        <table width="800px" align="center">
-                            <tbody>
-                                <tr>
-                                    <th><img width="224" src="./assets/data/bird.gif" /></th>
-                                    <th><img width="224" src="./assets/reference/bird-forest/0001.jpg" /></th>
-                                    <th><img width="224" src="./assets/results/bird/macaw-snow.gif" /></th>
-                                </tr>
-                                <tr>
-                                    <th><div class="caption" style="width: 300px;">"A red macaw flying over a river"</div></th>
-                                    <th><div class="caption"></div></th>
-                                    <th><div class="caption">"A <span style="color: darkred">red macaw</span> flying over <span style="color: steelblue">the hills in the snow</span>"</span></div></th>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-
-                </div>
-
-                <a class="carousel-control-prev" href="#resultCarousel3" role="button" data-slide="prev">
-                    <div class="slider-navigation-previous" style="top: 40%">
-                        <svg viewBox="0 0 50 80" xml:space="preserve">
-                            <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
-                                stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 ">
-                            </polyline>
-                        </svg>
-                    </div>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#resultCarousel3" role="button" data-slide="next">
-                    <div class="slider-navigation-next" style="top: 40%">
-                        <svg viewBox="0 0 50 80" xml:space="preserve">
-                            <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
-                                stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 ">
-                            </polyline>
-                        </svg>
-                    </div>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-
-
-
-        <p class="section">&nbsp;</p>
-
-
-        <p class="section" id="bibtex"><b>Bibtex</b></p>
-        <table border="0">
+          </table>
+          <p class="section">&nbsp;</p>
+          <p class="section" id="sm"><b>Supplementary Material</b></p>
+          <table width="587" height="136" border="0">
             <tbody>
-                <pre style=" display: block;
-                    background: #eee;
-                    white-space: pre;
-                    -webkit-overflow-scrolling: touch;
-                    max-width: 100%;
-                    min-width: 100px;
-                    border-radius: 20px;
-                    ">
-
-    @article{zhao2023makeaprotagonist,
-        title={Make-A-Protagonist: Generic Video Editing with An Ensemble of Experts},
-        author={Zhao, Yuyang and Xie, Enze and Hong, Lanqing and Li, Zhenguo and Lee, Gim Hee},
-        journal={arXiv preprint arXiv:2305.08850},
-        year={2023}
-    }       
-			    </pre>
+              <tr>
+                <td width="180"><img src="./pics/sm_illustration.png" alt="" height="150"></td>
+                <td align="left">
+                  <p>[<a href="./sm/index.html" target="_blank">supplementary page</a>]</p>
+                </td>
+              </tr>
             </tbody>
-        </table>
-        
-    </div>
+          </table>
+<!--	      <p class="section">&nbsp;</p>-->
 
-    <footer class="footer">
-        <p style="text-align: center;">
-            This page was adapted from <a href="https://tuneavideo.github.io/">Tune-A-Video</a>.
-        </p>
-    </footer>
+          <table border="0">
+            <tbody>
 
+            </tbody>
+          </table>
+<!--	      <p class="section"></p>-->
+<!--          <p>&nbsp;</p>-->
+</div>
+
+             <p class="section">&nbsp;</p>
+         <p class="section" id="bibtex"><b>Bibtex</b></p>
+         <table border="0">
+            <tbody>
+               <pre style=" display: block;
+                  background: #eee;
+                  white-space: pre;
+                  -webkit-overflow-scrolling: touch;
+                  max-width: 100%;
+                  min-width: 100px;
+                  border-radius: 20px;
+                  padding: 0;;">
+
+@article{bar2023multidiffusion,
+  title={MultiDiffusion: Fusing Diffusion Paths for Controlled Image Generation},
+  author={Bar-Tal, Omer and Yariv, Lior and Lipman, Yaron and Dekel, Tali},
+  journal={arXiv preprint arXiv:2302.08113},
+  year={2023}
+}
+			  </pre>
+            </tbody>
+         </table>
+
+    <script>
+
+
+
+        let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+    </script>
 
 </body>
-
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-WLX2Z5QLG8');
- </script>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
- <script type="text/javascript">
-    $(document).ready(function () {
-
-        if (localStorage.getItem("my_app_name_here-quote-scroll") != null) {
-            $(window).scrollTop(localStorage.getItem("my_app_name_here-quote-scroll"));
-        }
-
-        $(window).on("scroll", function() {
-            localStorage.setItem("my_app_name_here-quote-scroll", $(window).scrollTop());
-        });
-
-      });
- </script>
-
- <script>
-    function prompt_on(prompt_element) {
-        prompt_element.classList.add("caption-active");
-    }
-
-    function prompt_off(prompt_element) {
-        prompt_element.classList.remove("caption-active");
-    }
-
-    function toggle_prompt(active_prompt_id, inactive_prompt_ids, result_id) {
-        let active_prompt = document.getElementById(active_prompt_id);
-        prompt_on(active_prompt);
-        for (let i = 0; i < inactive_prompt_ids.length; i++) {
-            let inactive_prompt = document.getElementById(inactive_prompt_ids[i]);
-            prompt_off(inactive_prompt);
-        }
-
-        let result = document.getElementById(result_id);
-        result.src = file_paths[active_prompt_id];
-    }
-
-    function toggle_prompts(active_prompt_id1, active_prompt_id2, inactive_prompt_ids1, inactive_prompt_ids2, result_id1, result_id2 ) {
-    toggle_prompt(active_prompt_id1, inactive_prompt_ids1, result_id1);
-    toggle_prompt(active_prompt_id2, inactive_prompt_ids2, result_id2);
-    }
-
-
- </script>
-
- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
 </html>
