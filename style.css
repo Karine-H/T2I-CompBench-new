@@ -275,3 +275,7 @@ code {
 .teaser-img {
     width: 224px !important;
 }
+
+.move-down {
+    margin-top: 50px; /* Adjust this value to move the paragraph down */
+}
