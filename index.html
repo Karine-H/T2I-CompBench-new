@@ -142,7 +142,7 @@
 	<p class="move-down">&nbsp;</p>
         <p style="text-align: center;"><span class="section"><b>Abstract</b></span></p>
         <p style="text-align: justify; display: flex; justify-content: center; max-width: 800px; margin:auto"> 
-		Despite the stunning ability to generate high-quality images by recent text-to-image generation models, current approaches often fail to compose objects with different attributes and relationships into a complex and coherent scene. We propose T2I-CompBench, a comprehensive benchmark for open-world compositional text-to-image synthesis, consisting of 6,000 compositional text prompts from 3 categories (attribute binding, object relationships, and complex compositions) and 6 sub-categories (color binding, shape binding, texture binding, spatial relationships, non-spatial relationships, and complex compositions). We further propose several evaluation metrics specifically designed to evaluate compositional text-image generation models, and explore the potential of multimodal LLM for evaluation. We propose an improved baseline, Generative mOdel finetuning with Reward-driven Sample selection (GORS), to boost the compositional generation abilities of pretrained text-to-image models. Extensive experiments and evaluations are conducted to benchmark previous methods on T2I-CompBench, and validate the effectiveness of our proposed evaluation metrics and GORS approach.
+		Despite the stunning ability to generate high-quality images by recent text-to-image models, current approaches often struggle to effectively compose objects with different attributes and relationships into a complex and coherent scene. We propose T2I-CompBench++, an enhanced and comprehensive benchmark for compositional text-to-image generation, consisting of 8,000 compositional text prompts from 4 categories (attribute binding, object relationships, generative numeracy, and complexcompositions) and 8 sub-categories (color binding, shape binding, texture binding, 2D/3D-spatial relationships, non-spatial relationships, numeracy, and complex compositions). We further propose several evaluation metrics specifically designed to evaluate compositional text-to-image generation and explore the potential and limitations of multimodal LLMs for evaluation. We introduce a new approach, Generative mOdel finetuning with Rewarddriven Sample selection (GORS), to boost the compositional text-to-image generation abilities of pretrained text-to-image models. Extensive experiments and evaluations are conducted to benchmark previous methods on T2I-CompBench++, and to validate the effectiveness of our proposed evaluation metrics and GORS approach.
         <p class="section">&nbsp;</p>
 
         <p class="section"><b>Introduction</b></p>
@@ -154,12 +154,11 @@
 	    
         <p class="section"><b>Evaluation</b></p>
         <div style="text-align: center">
-            <img src="./assets/2-0.jpg" alt="" style="max-width: 100%; height: auto;" />
+            <img src="./assets/pipeline_metrics.png" alt="" style="max-width: 100%; height: auto;" />
         </div>
         </br>
         <p style="text-align: center">
-            <em>BLIP-VQA for attribute binding evaluation, UniDet for spatial relationship evaluation, 
-		and MiniGPT4-CoT as a potential unified metric.</em>
+            <em>(a) Disentangled BLIP-VQA for attribute binding evaluation, (b) UniDet for 2D/3D-spatial relationship evaluation, (c) UniDet for numeracy evaluation, and (d) MLLM as a potential unified metric.</em>
         </p>
         
         <p class="section">&nbsp;</p>
